@@ -28,7 +28,7 @@ info solve(TreeNode* root, int &ans) {
     info curNode;
     curNode.size = left.size + right.size + 1;
     curNode.maxi = max(root->data, right.maxi);
-    curNode.mini = min(root->data, left.mini);
+    curNode.mini = max(root->data, left.mini);
 
     if(left.isBST && right.isBST && (root->data > left.maxi && root->data < right.mini))
         curNode.isBST = true;
