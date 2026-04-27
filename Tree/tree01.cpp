@@ -21,9 +21,9 @@ node* createtree(node* root) {
         return NULL;
     }
 
-    cout << "Enter the data to insert in left of " << data << endl;
+    cout << "Left of " << data << endl;
     root->left = createtree(root->left);
-    cout << "Enter the data to insert in right of " << data << endl;
+    cout << "Right of " << data << endl;
     root->right = createtree(root->right);
     return root;
 }
@@ -295,11 +295,11 @@ int main(){
 
     // Create a tree 1 3 7 -1 -1 11 -1 -1 5 17 -1 -1 -1 -1
     root = createtree(root);
-    buildtreefromlevelorder(root);
+    // buildtreefromlevelorder(root);
 
 
     // To level Order traversal
-    levelOrdertraversal(root);
+    // levelOrdertraversal(root);
 
     // To reverse level Order traversal
     // reverselevelOrdertraversal(root);
