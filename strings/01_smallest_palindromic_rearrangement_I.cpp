@@ -1,11 +1,12 @@
 /*
 You are given a palindromic string s.
-
 Return the lexicographically smallest palindromic permutation of s.
 */
 #include<iostream>
 #include <map>
 using namespace std;
+
+// TC = O(nlogn), SC = O(n)
 class Solution {
 public:
     string smallestPalindrome(string s, int k) {
