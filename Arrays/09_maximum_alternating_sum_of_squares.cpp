@@ -46,7 +46,9 @@ Constraints:
 #include<iostream>
 #include<vector>
 #include<algorithm>
+#include <numeric>
 using namespace std;
+
 
 
 
@@ -76,5 +78,25 @@ public:
         }
 
         return ans;
+    }
+};
+
+
+
+
+
+
+
+// TC : O(nlogn) SC: O(1)
+class Solution {
+public:
+    long long maxAlternatingSum(vector<int>& nums) {
+        int n = nums.size();
+        for (auto& num : nums)
+            num *= num;
+
+        sort(nums.begin(), nums.end());
+        return -accumulate(nums.begin(), nums.begin() + n / 2, 0LL) +
+                accumulate(nums.begin() + n / 2, nums.end(), 0LL);
     }
 };
